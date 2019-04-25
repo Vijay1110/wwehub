@@ -1,0 +1,54 @@
+.section-features {
+    padding: 10rem 0;
+    background-image: linear-gradient(to bottom, rgba(#e35d5b, 0.8), rgba(238, 56, 122, 0.8)), url(../img/wwe-background-2.jpg); 
+    background-size: cover;
+
+    @include respond(phone){
+        padding: 5rem;
+    background-image: linear-gradient(to bottom, rgba(#e35d5b, 0.8), rgba(238, 56, 122, 0.8)), url(../img/wwe-background-2-min.jpg); 
+
+    }
+}     
+
+.daily-matches {
+    padding: 10rem 0;
+    background-image: linear-gradient(to bottom, rgba($blackcolor, 1), rgba($blackcolor, .9)), url(../img/wwe-background-3.jpg); 
+    background-size: cover;  
+    @include respond(phone){
+        padding: 5rem;
+    background-image: linear-gradient(to bottom, rgba($blackcolor, 1), rgba($blackcolor, .9)), url(../img/wwe-background-3-min.jpg); 
+
+    }
+} 
+
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $leftcolor,  rgba(238, 56, 122, 0.8));
+
+    @include respond(phone){
+        padding: 7rem 0; 
+        
+    } 
+} 
+
+.book{
+    background-image: linear-gradient(90deg, rgba($whitecolor, .9) 0%,
+    rgba($whitecolor,.9)50%,transparent 50%),url(../img/wwe-9.jpg);
+    background-size: 100%;
+
+    @include respond (phone){
+        background-image: linear-gradient(90deg, rgba($whitecolor, .9) 0%,
+    rgba($whitecolor,.9)50%,rgba($whitecolor, .9) 50%),url(../img/wwe-9.jpg);
+    background-repeat: no-repeat;
+    width: 70%;
+    margin: auto;
+    }
+    &__form {
+        width: 50%;
+        padding:6rem;
+        @include respond (phone){
+            width: 100%;   
+            padding: 2rem;
+        }
+    }
+} 

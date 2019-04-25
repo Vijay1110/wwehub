@@ -1,0 +1,52 @@
+.footer {
+    background-color: $color-dark-gray-3; 
+    padding: 5rem 0rem; 
+    font-size: 1.4rem; 
+    color: $whitecolor;
+    line-height: 3rem;
+    text-align: center;
+    @include respond(phone){
+        line-height: 2rem;
+        // padding: 3rem;
+        font-size: 1.2rem;
+    }
+    &__logo{
+        text-align: center; 
+    }
+    &__navigation {
+        border-top: 1px solid rgb(192, 192, 192); 
+        padding-top: 2rem;
+        display: inline-block;
+        @include respond(phone){
+            padding-top: 1rem; 
+            width: 100%;
+        }
+
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+            @include respond(phone){
+                margin-right: .3rem;
+            }
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+        } 
+
+    }
+    } 

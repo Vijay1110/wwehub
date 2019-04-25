@@ -1,0 +1,120 @@
+.card{
+    overflow: hidden;
+    height: 58rem;  
+    background-color: $whitecolor;
+    border-radius: .5rem;
+    position: relative;
+    font-size: 1rem;
+    transition: all 1s;
+
+    @include respond (phone){
+        height: 48rem; 
+        text-align: center;    
+        
+    }
+ 
+    &__img--1{
+        background-image: linear-gradient(to bottom ,
+        rgba($leftcolor, .9),
+        rgba($leftcolor, 0.5)) ,url(../img/wwe-2.jpg); 
+        background-size: cover;
+        height: 33rem; 
+        background-position: 0% 30%; 
+        @include respond (phone){
+            height: 15rem;
+            background-image: linear-gradient(to bottom ,
+        rgba($leftcolor, .9),
+        rgba($leftcolor, 0.5)) ,url(../img/wwe-2-min.jpg);
+        }
+        
+    } 
+    &__img--2{
+        background-image: linear-gradient(to bottom ,
+        rgba($leftcolor, .9),
+        rgba($leftcolor, 0.5)) ,url(../img/wwe-3.jpg); 
+        background-size: cover;
+        height: 33rem;  
+        background-position: 50%;
+        @include respond (phone){
+            height: 15rem;
+            background-image: linear-gradient(to bottom ,
+        rgba($leftcolor, .9),
+        rgba($leftcolor, 0.5)) ,url(../img/wwe-3-min.jpg);
+        }
+    }
+    &__heading {
+        background-image: linear-gradient(to bottom ,
+        rgba($leftcolor, .9),
+        rgba($leftcolor, 0.5));
+        color: $whitecolor;
+        display: inline-block;
+        font-size: 2.8rem;
+        font-weight: 300;
+        position: absolute;
+        top: 15.5rem; 
+        left: 0;
+        padding: .5rem 1.2rem;
+
+        @include respond(phone){
+            top: 8rem;  
+            font-size: 1.8rem;
+        }
+    } 
+    &__details{
+        padding: 3rem;
+        ul{
+            list-style: none;
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+            li{
+                font-size: 1.5rem;  
+                padding: 1rem;
+                color: rgb(121, 121, 121);
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgb(121, 121, 121);
+                } 
+            }
+        }
+
+        
+        
+    }
+
+    &__button{
+        position: absolute;
+        top: 50%;
+        left: 50%;   
+        transform: translate(-50%); 
+        opacity: 0;
+        transition: all .5s;
+        @include respond (phone){
+           position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0%); 
+            text-align: center;
+            opacity: 1;
+            padding: 4rem;
+            background-color: $leftcolor !important;
+            color:$whitecolor !important;
+        }
+    }
+
+    &:hover &__button{
+        z-index: 999; 
+        opacity: 1;
+        background-color: $leftcolor;
+        color:$whitecolor;
+        
+        @include respond(phone){
+            background-color: $leftcolor;
+            color:$whitecolor;
+        }
+    }
+
+    &:hover :not(.card__button){
+        filter: blur(3px) brightness(80%);
+          
+    }
+} 

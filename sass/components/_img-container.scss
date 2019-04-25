@@ -1,0 +1,15 @@
+.img-container {
+    width: 100%;
+    // border: 3px solid yellow;
+    height: 30rem;
+    background-image: linear-gradient(to right ,
+    rgba($blackcolor, .4),
+    rgba($primarycolor, 0.2)) 
+    ,url(../img/wwe-1.jpg);
+    background-size: cover;
+    border-radius: 3px;
+    
+    @include respond(phone){
+        height: 20rem;
+    }
+}

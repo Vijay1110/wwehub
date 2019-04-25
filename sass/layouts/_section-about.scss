@@ -1,0 +1,13 @@
+.section-about{
+    width: 100%;
+    height: 100vh; 
+    background-color: $blackcolor; 
+    padding: 10rem 0;
+
+    @include respond(phone){
+    padding: .2rem 3rem;
+    height: auto; 
+    }
+
+
+} 
