@@ -1,0 +1,486 @@
+/*
+0 - 600PX:      PHONE
+600 - 900PX:    TABLET PORTRAIT
+900 - 1200PX:   TABLET LANDSCAPE
+[1200 - 1800] is where our normal style apply
+1800px + : for bigger desktop
+*/
+/*
+    $breakpoint argument choice
+    phone
+    tab-port
+    tab-land
+    big-desktop
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; }
+
+.heading-primary {
+  font-size: 5rem;
+  color: #fff; }
+  .heading-primary--main {
+    display: inline-block;
+    font-size: 6rem;
+    letter-spacing: 1rem;
+    font-weight: 300;
+    margin-bottom: 6rem;
+    padding-top: 3rem; }
+    @media (max-width: 75em) {
+      .heading-primary--main {
+        font-size: 4rem;
+        letter-spacing: .5rem; } }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 3rem; } }
+
+.heading-secondary {
+  font-size: 3.1rem;
+  padding: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: inline-block;
+  color: transparent;
+  background-image: linear-gradient(to right, #EE387A, #e35d5b);
+  -webkit-background-clip: text;
+  border-left: 4px solid #EE387A;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  @media (max-width: 75em) {
+    .heading-secondary {
+      font-size: 2.5rem;
+      padding: 1.5rem; } }
+  @media (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 2rem; } }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 1.5rem;
+      padding: 1rem; } }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem;
+  font-weight: 300; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+  .paragraph--white {
+    color: #fff; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.font-color-white {
+  color: white !important; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  opacity: .61;
+  overflow: hidden;
+  background-color: red; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.bg-setting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: rgba(19, 22, 31, 0.75); }
+
+.card {
+  overflow: hidden;
+  height: 58rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  position: relative;
+  font-size: 1rem;
+  transition: all 1s; }
+  @media (max-width: 37.5em) {
+    .card {
+      height: 48rem;
+      text-align: center; } }
+  .card__img--1 {
+    background-image: linear-gradient(to bottom, rgba(109, 93, 244, 0.9), rgba(109, 93, 244, 0.5)), url(../img/wwe-2.jpg);
+    background-size: cover;
+    height: 33rem;
+    background-position: 0% 30%; }
+    @media (max-width: 37.5em) {
+      .card__img--1 {
+        height: 15rem;
+        background-image: linear-gradient(to bottom, rgba(109, 93, 244, 0.9), rgba(109, 93, 244, 0.5)), url(../img/wwe-2-min.jpg); } }
+  .card__img--2 {
+    background-image: linear-gradient(to bottom, rgba(109, 93, 244, 0.9), rgba(109, 93, 244, 0.5)), url(../img/wwe-3.jpg);
+    background-size: cover;
+    height: 33rem;
+    background-position: 50%; }
+    @media (max-width: 37.5em) {
+      .card__img--2 {
+        height: 15rem;
+        background-image: linear-gradient(to bottom, rgba(109, 93, 244, 0.9), rgba(109, 93, 244, 0.5)), url(../img/wwe-3-min.jpg); } }
+  .card__heading {
+    background-image: linear-gradient(to bottom, rgba(109, 93, 244, 0.9), rgba(109, 93, 244, 0.5));
+    color: #fff;
+    display: inline-block;
+    font-size: 2.8rem;
+    font-weight: 300;
+    position: absolute;
+    top: 15.5rem;
+    left: 0;
+    padding: .5rem 1.2rem; }
+    @media (max-width: 37.5em) {
+      .card__heading {
+        top: 8rem;
+        font-size: 1.8rem; } }
+  .card__details {
+    padding: 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      text-align: center;
+      margin: 0 auto; }
+      .card__details ul li {
+        font-size: 1.5rem;
+        padding: 1rem;
+        color: #797979; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #797979; }
+  .card__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: all .5s; }
+    @media (max-width: 37.5em) {
+      .card__button {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0%);
+        text-align: center;
+        opacity: 1;
+        padding: 4rem;
+        background-color: #6D5DF4 !important;
+        color: #fff !important; } }
+  .card:hover .card__button {
+    z-index: 999;
+    opacity: 1;
+    background-color: #6D5DF4;
+    color: #fff; }
+    @media (max-width: 37.5em) {
+      .card:hover .card__button {
+        background-color: #6D5DF4;
+        color: #fff; } }
+  .card:hover :not(.card__button) {
+    filter: blur(3px) brightness(80%); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #EE387A, #e35d5b);
+    -webkit-background-clip: text;
+    color: transparent; }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  color: inherit;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  font-family: inherit;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #6D5DF4; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid red; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s; }
+
+.btn, .btn:active, .btn:visited {
+  font-size: 3.2rem;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 10rem;
+  padding: 1.5rem 3rem;
+  font-weight: 300;
+  color: #13161f;
+  border: none;
+  cursor: pointer;
+  transition: all .3s; }
+  @media (max-width: 37.5em) {
+    .btn, .btn:active, .btn:visited {
+      font-size: 2.2rem;
+      padding: .7rem 1.5rem; } }
+
+.btn:hover {
+  color: white;
+  background-color: #13161f; }
+
+.btn--leftcolor {
+  background-color: #e35d5b;
+  color: #fff;
+  padding: 1rem 2.5rem; }
+  @media (max-width: 37.5em) {
+    .btn--leftcolor {
+      font-size: 2.2rem;
+      padding: .5rem 1.3rem; } }
+  .btn--leftcolor:hover {
+    color: #e35d5b;
+    background-color: #fff; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #e35d5b;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #e35d5b;
+  padding: 3px;
+  transition: all .3s; }
+
+.btn-text:hover {
+  color: #fff;
+  background-color: #e35d5b;
+  box-shadow: 0 1rem 2rem rgba(238, 56, 122, 0.15);
+  transform: translateY(-2px); }
+
+.img-container {
+  width: 100%;
+  height: 30rem;
+  background-image: linear-gradient(to right, rgba(19, 22, 31, 0.4), rgba(238, 56, 122, 0.2)), url(../img/wwe-1.jpg);
+  background-size: cover;
+  border-radius: 3px; }
+  @media (max-width: 37.5em) {
+    .img-container {
+      height: 20rem; } }
+
+.footer {
+  background-color: #333;
+  padding: 5rem 0rem;
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 3rem;
+  text-align: center; }
+  @media (max-width: 37.5em) {
+    .footer {
+      line-height: 2rem;
+      font-size: 1.2rem; } }
+  .footer__logo {
+    text-align: center; }
+  .footer__navigation {
+    border-top: 1px solid silver;
+    padding-top: 2rem;
+    display: inline-block; }
+    @media (max-width: 37.5em) {
+      .footer__navigation {
+        padding-top: 1rem;
+        width: 100%; } }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+      @media (max-width: 37.5em) {
+        .footer__item:not(:last-child) {
+          margin-right: .3rem; } }
+  .footer__link:link, .footer__link:visited {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col"] {
+    float: left; }
+    .row [class^="col"]:not(:last-child) {
+      margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col"] {
+        width: 100% !important;
+        padding: 0 3rem; } }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(19, 22, 31, 0.9), rgba(238, 56, 122, 0.5)), url(../img/hero-wwe.jpg);
+  background-size: cover;
+  background-attachment: fixed; }
+  @media (max-width: 37.5em) {
+    .header {
+      background-position-x: 35%;
+      background-image: linear-gradient(to bottom, rgba(19, 22, 31, 0.9), rgba(238, 56, 122, 0.5)), url(../img/hero-wwe-min.jpg); } }
+  .header--logo-box {
+    display: inline-block;
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    overflow: hidden; }
+    @media (max-width: 37.5em) {
+      .header--logo-box {
+        top: 2rem;
+        left: 2rem; } }
+  .header__logo {
+    font-size: 5rem;
+    color: transparent;
+    text-transform: uppercase;
+    padding: 2rem;
+    background-image: linear-gradient(to right, #EE387A, #e35d5b);
+    -webkit-background-clip: text; }
+    @media (max-width: 37.5em) {
+      .header__logo {
+        font-size: 3rem;
+        padding: .5rem; } }
+  .header__text-box {
+    position: absolute;
+    width: 114rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase; }
+    @media (max-width: 75em) {
+      .header__text-box {
+        width: 90rem; } }
+    @media (max-width: 56.25em) {
+      .header__text-box {
+        width: 74rem; } }
+    @media (max-width: 37.5em) {
+      .header__text-box {
+        width: 40rem; } }
+
+.section-about {
+  width: 100%;
+  height: 100vh;
+  background-color: #13161f;
+  padding: 10rem 0; }
+  @media (max-width: 37.5em) {
+    .section-about {
+      padding: .2rem 3rem;
+      height: auto; } }
+
+.section-features {
+  padding: 10rem 0;
+  background-image: linear-gradient(to bottom, rgba(227, 93, 91, 0.8), rgba(238, 56, 122, 0.8)), url(../img/wwe-background-2.jpg);
+  background-size: cover; }
+  @media (max-width: 37.5em) {
+    .section-features {
+      padding: 5rem;
+      background-image: linear-gradient(to bottom, rgba(227, 93, 91, 0.8), rgba(238, 56, 122, 0.8)), url(../img/wwe-background-2-min.jpg); } }
+
+.daily-matches {
+  padding: 10rem 0;
+  background-image: linear-gradient(to bottom, #13161f, rgba(19, 22, 31, 0.9)), url(../img/wwe-background-3.jpg);
+  background-size: cover; }
+  @media (max-width: 37.5em) {
+    .daily-matches {
+      padding: 5rem;
+      background-image: linear-gradient(to bottom, #13161f, rgba(19, 22, 31, 0.9)), url(../img/wwe-background-3-min.jpg); } }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #6D5DF4, rgba(238, 56, 122, 0.8)); }
+  @media (max-width: 37.5em) {
+    .section-book {
+      padding: 7rem 0; } }
+
+.book {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/wwe-9.jpg);
+  background-size: 100%; }
+  @media (max-width: 37.5em) {
+    .book {
+      background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 50%), url(../img/wwe-9.jpg);
+      background-repeat: no-repeat;
+      width: 70%;
+      margin: auto; } }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
+    @media (max-width: 37.5em) {
+      .book__form {
+        width: 100%;
+        padding: 2rem; } }

@@ -1,0 +1,28 @@
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+    opacity: .61; 
+    overflow: hidden;
+    background-color: red;
+ 
+    
+
+    &__content{ 
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+} 
+
+.bg-setting{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: rgba($blackcolor, .75); 
+}  
